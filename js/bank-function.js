@@ -2,6 +2,9 @@
 function choiceDWId(choiceId, isAdd){
     // input amount
     const inputId = document.getElementById(choiceId+'-amount');
+    // error id
+    const msgPositiveNumber = document.getElementById('msg-positiveNumber');
+    const msgBalance = document.getElementById('msg-balance');
 //    error handle condition 
    if(inputId.value > 0){
         const inputIdValue = inputId.value;
@@ -21,14 +24,20 @@ function choiceDWId(choiceId, isAdd){
         }
         else{
             const withdrawBalance = parseFloat(balanceIdText) - parseFloat(inputIdValue);
-            balanceId.innerText = withdrawBalance;
+            if(withdrawBalance > 0){
+                balanceId.innerText = withdrawBalance;
+                msgBalance.style.display = 'none';
+            }
+            else{
+                msgBalance.style.display = 'block';
+            }
         }
+        msgPositiveNumber.style.display = 'none';
    }
    else{
        // clean input field
        inputId.value = '';
-       console.log(':)')
-
+       msgPositiveNumber.style.display = 'block';
    }
 }
 
