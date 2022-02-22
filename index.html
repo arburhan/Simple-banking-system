@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-7xl mt-32 text-center">Welcome to my <span class="text-indigo-400">Bap er bank!</span> </h1>
+    </header>
+    <main>
+        <section class="bg-cyan-300 w-3/4 mx-auto mt-10 p-9 rounded">
+            <h2 class="text-3xl mb-7">Please log in</h2>
+            <div class="" action="">
+                <input id="user-email" class="border border-grey-400 rounded block w-3/4 px-2 mb-4" type="email" name="email" id="" placeholder="enter your email">
+                <input id="user-password" class="border border-grey-400 rounded block w-3/4 px-2 mb-4" type="password" name="password" id="" placeholder="enter your password">
+                <button onclick="bankPage()" class="bg-green-500 text-white p-2 rounded font-medium">log in</button>
+            </div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+    <script>
+        function bankPage(){
+            location.href = 'banking.html';
+        }
+
+    </script>
+</body>
+</html>
